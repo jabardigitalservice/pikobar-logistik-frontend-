@@ -4,6 +4,7 @@ FROM node:10.16-alpine as build-stage
 # Create app folder
 RUN mkdir /app
 WORKDIR /app
+COPY . .
 
 # Copy all files to app folder
 COPY package*.json ./
