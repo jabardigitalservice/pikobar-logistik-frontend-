@@ -1,6 +1,6 @@
 # build stage
 #FROM node:10.16-alpine as build-stage
-FROM node:14.15.4-slim
+FROM node:14.15.4-slim as build-stage
 
 
 # Create app folder
