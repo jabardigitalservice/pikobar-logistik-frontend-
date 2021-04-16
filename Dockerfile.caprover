@@ -1,6 +1,6 @@
 # build stage
-#FROM node:10.16-alpine as build-stage
-FROM node:14.15.4-slim as build-stage
+FROM node:10.16-alpine as build-stage
+#FROM node:14.15.4-slim as build-stage
 
 
 # Create app folder
@@ -9,8 +9,9 @@ WORKDIR /app
 COPY . .
 
 # Copy all files to app folder
-#COPY package*.json ./
-#RUN npm install --progress=false
+COPY package*.json ./
+RUN rm -rf package-lock.json
+RUN npm install --progress=false
 RUN npm install
 RUN npm run build
 COPY . /app
