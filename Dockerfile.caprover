@@ -11,7 +11,7 @@ COPY . .
 # Copy all files to app folder
 COPY package*.json ./
 RUN rm -rf package-lock.json
-RUN npm cache clean
+#RUN npm cache clean --force
 RUN npm install
 RUN npm run build
 COPY . /app
