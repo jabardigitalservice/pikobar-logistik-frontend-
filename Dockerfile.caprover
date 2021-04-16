@@ -1,5 +1,5 @@
 # build stage
-FROM node:10.16-alpine as build-stage
+#FROM node:10.16-alpine as build-stage
 #FROM node:14.15.4-slim as build-stage
 FROM node:12.22.1-alpine3.10 as build-stage
 
