@@ -1,7 +1,7 @@
 # build stage
 #FROM node:10.16-alpine as build-stage
-FROM node:14.15.4-slim as build-stage
-#FROM node:12.22.1-alpine3.10 as build-stage
+#FROM node:14.15.4-slim as build-stage
+FROM node:12.22.1-alpine3.10 as build-stage
 
 # Create app folder
 RUN mkdir /app
@@ -12,7 +12,7 @@ COPY . .
 COPY package*.json ./
 RUN rm -rf package-lock.json
 RUN npm cache clean --force
-RUN npm install
+RUN npm install --progress=false
 RUN npm run build
 COPY . /app
 # Environment app
