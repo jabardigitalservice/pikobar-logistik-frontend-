@@ -1,4 +1,6 @@
-package-json.lock
+package-lock.json
+vendor/*
+node_modules/*
 .env.staging
 .env.production
 docker-compose-*
