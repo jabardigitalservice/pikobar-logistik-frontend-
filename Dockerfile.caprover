@@ -7,7 +7,6 @@ WORKDIR /app
 
 # Copy all files to app folder
 COPY package*.json ./
-RUN rm -rf package-lock.json
 RUN npm install --progress=false
 COPY . /app
 # Environment app

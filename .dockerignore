@@ -1,4 +1,4 @@
-package-lock.json
+file package-json.lock
 .env.staging
 .env.production
 docker-compose-*
