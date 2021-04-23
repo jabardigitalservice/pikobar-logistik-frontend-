@@ -8,7 +8,7 @@ WORKDIR /app
 # Copy all files to app folder
 COPY package*.json ./
 RUN ls -la
-RUN npm install --progress=false
+RUN npm install 
 COPY . /app
 # Environment app
 ARG VUE_APP_SECURE
