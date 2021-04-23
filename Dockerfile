@@ -6,10 +6,11 @@ RUN mkdir /app
 WORKDIR /app
 
 # Copy all files to app folder
-COPY package*.json ./
-RUN ls -la
-RUN npm install 
+#COPY package*.json ./
 COPY . /app
+RUN ls -la 
+RUN npm install 
+#COPY . /app
 # Environment app
 ARG VUE_APP_SECURE
 ARG VUE_APP_URL
