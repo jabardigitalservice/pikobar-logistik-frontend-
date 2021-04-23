@@ -7,6 +7,7 @@ WORKDIR /app
 
 # Copy all files to app folder
 COPY package*.json ./
+RUN ls -la
 RUN npm install --progress=false
 COPY . /app
 # Environment app
